@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Calculator - GeoCalc</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="triangle.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.webp" alt="GeoCalc Logo" class="logo">
+            <h1>GeoCalc</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="square.html">Square</a></li>
+                <li><a href="rectangle.html">Rectangle</a></li>
+                <li><a href="triangle.html" class="active">Triangle</a></li>
+                <li><a href="circle.html">Circle</a></li>
+                <li><a href="cube.html">Cube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h2>Triangle Calculator</h2>
+                <p>Calculate the area and perimeter of a triangle</p>
+            </div>
+
+            <div class="shape-illustration">
+                <div class="triangle" style="border-left: 80px solid transparent; border-right: 80px solid transparent; border-bottom: 150px solid #2c3e50; position: relative;">
+                    <div style="position: absolute; left: -90px; top: 75px;">
+                        <span>a</span>
+                    </div>
+                    <div style="position: absolute; right: -90px; top: 75px;">
+                        <span>b</span>
+                    </div>
+                    <div style="position: absolute; bottom: -20px; left: -10px;">
+                        <span>c</span>
+                    </div>
+                    <div style="position: absolute; left: 0; top: -20px;">
+                        <span>h</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-tabs">
+                <button class="tab-btn active" data-tab="sides-tab">Three Sides</button>
+                <button class="tab-btn" data-tab="base-height-tab">Base and Height</button>
+            </div>
+
+            <div id="sides-tab" class="tab-content active">
+                <form id="triangle-sides-form" class="calculator-form">
+                    <div class="form-group">
+                        <label for="side-a">Side a:</label>
+                        <input type="number" id="side-a" min="0" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="side-b">Side b:</label>
+                        <input type="number" id="side-b" min="0" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="side-c">Side c:</label>
+                        <input type="number" id="side-c" min="0" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sides-unit">Unit:</label>
+                        <select id="sides-unit">
+                            <option value="cm">Centimeters (cm)</option>
+                            <option value="m">Meters (m)</option>
+                            <option value="inch">Inches (in)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Calculate</button>
+                </form>
+            </div>
+
+            <div id="base-height-tab" class="tab-content">
+                <form id="triangle-base-height-form" class="calculator-form">
+                    <div class="form-group">
+                        <label for="base">Base:</label>
+                        <input type="number" id="base" min="0" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="height">Height:</label>
+                        <input type="number" id="height" min="0" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="base-height-unit">Unit:</label>
+                        <select id="base-height-unit">
+                            <option value="cm">Centimeters (cm)</option>
+                            <option value="m">Meters (m)</option>
+                            <option value="inch">Inches (in)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Calculate</button>
+                </form>
+            </div>
+
+            <div id="results" class="results">
+                <h3>Results</h3>
+                <div id="results-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="GeoCalc Logo" class="logo-small">
+                <h3>GeoCalc</h3>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: contact@geocalc.com</p>
+                <p>Phone: (961) 456-7890</p>
+                <div class="social-icons">
+                    <img src="images/instagram.png" class="social-icon">
+                    <img src="images/facebook.png" class="social-icon">
+                    <img src="images/twitter.png" class="social-icon">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 GeoCalc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
